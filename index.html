@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="client.js"></script>
-    <title>Salary Calculator</title>
-</head>
-<body>
-    <h1>Salary Calculator</h1>
-    
-<div class="inputFields">
-    <input placeholder="First Name" id="firstName">
-    <input placeholder="Last Name" id="lastName">
-    <input placeholder="ID Number" id="idNumber">
-    <input placeholder="Job Title" id="jobTitle">
-    <input placeholder="Annual Salary" id="annualSalary">
-</div>
-   
-<div class="enterField">
-    <button class="enterField" id="enterField">Enter</button>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery-3.6.0.min.js"></script>
+		<script src="client.js"></script>
+		<title>Salary Calculator</title>
+	</head>
+	<body>
+		<h1>Salary Calculator</h1>
+
+		<h2>Add Employee</h2>
+
+		<div class="inputFields">
+			<input placeholder="First Name" id="firstName" />
+			<input placeholder="Last Name" id="lastName" />
+			<input placeholder="ID Number" id="idNumber" />
+			<input placeholder="Job Title" id="jobTitle" />
+			<input placeholder="Annual Salary" id="annualSalary" />
+		</div>
+
+		<div class="enterField">
+			<button class="enterField" id="enterField">Enter</button>
+		</div>
+
+		<h2 class="employeeHeader">
+			Total Monthly:<span id="totalMonthly"></span>
+		</h2>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last name</th>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Annual Salary</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody id="targeted"></tbody>
+			<!-- employee info will be added here -->
+		</table>
+	</body>
 </html>
 
 <!-- employee first name, last name, ID number, job title, annual salary_. -->
