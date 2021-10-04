@@ -1,3 +1,8 @@
 .red {
-	background-color: red;
+    background-color: red;
+}
+
+.calc {
+    text-align: center;
+    background-color: gray;
 }
