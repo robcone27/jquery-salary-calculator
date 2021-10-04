@@ -1,15 +1,16 @@
-console.log('js')
 let addEmployeeList = [];
-let totalMonthly = 0;
-$(readyNow);
 
+let totalMonthly = 0;
+
+$(readyNow);
+// click functions 
 function readyNow() {
     $(`#enterField`).on(`click`, addInfo);
     $(`#targeted`).on(`click`, `.deleteEmployee`, deleteEmployee);
 }
-function addInfo() {
-    console.log('it works!');
 
+// adds employee information 
+function addInfo() {
 
     let addEmployeeInfo = {
         firstName: $(`#firstName`).val(),
@@ -18,7 +19,6 @@ function addInfo() {
         jobTitle: $(`#jobTitle`).val(),
         annualSalary: $(`#annualSalary`).val()
     };
-    // console.log(addEmployeeInfo);
 
     addEmployeeList.push(addEmployeeInfo);
 
@@ -34,6 +34,7 @@ function addInfo() {
     monthlyTotal();
 }
 
+//pushes employee information to the DOM
 function renderInfo() {
     $(`#targeted`).empty();
 
@@ -54,7 +55,7 @@ function renderInfo() {
     }
 };
 
-
+// calculates employees monthly income
 function monthlyTotal() {
     let totalSalary = 0;
     for (let i = 0; i < addEmployeeList.length; i++) {
@@ -68,16 +69,16 @@ function monthlyTotal() {
     }
 
     $(`#totalMonthly`).text(formatCurrency(totalMonthly));
-
-
 };
 
+// deletes employee information 
 function deleteEmployee() {
     console.log('deleted')
     $(this).parent().parent().remove();
     $(this).closest('tr').remove();
 };
 
+// styles currency 
 function formatCurrency(number) {
     return new Intl.NumberFormat('en-US', {
         style: 'currency',
