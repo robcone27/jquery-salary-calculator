@@ -2,7 +2,11 @@
     background-color: red;
 }
 
-.calc {
+h1 {
     text-align: center;
     background-color: gray;
+}
+
+.cash {
+    padding-top: 30px;
 }
